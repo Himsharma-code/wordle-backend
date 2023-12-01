@@ -1,8 +1,10 @@
 import mongoose, { ConnectOptions } from 'mongoose';
 
+// mongoose.set('strictQuery', false);
+
 const connectDB = async () => {
     try {
-        await mongoose.connect(process.env.MONGO_URI as string, {
+        await mongoose.connect(process.env.MONGO_URI as string, { //mongodb://localhost:27017/wordle_db
             useNewUrlParser: true,
             useUnifiedTopology: true,
         } as ConnectOptions);

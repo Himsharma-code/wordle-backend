@@ -1,5 +1,5 @@
 {
-  "name": "auth-ts",
+  "name": "wordle-backend",
   "version": "1.0.0",
   "description": "TypeScript Rest API with Express.js, JWT, MongoDB",
   "main": "server.ts",
