@@ -2,7 +2,7 @@ import express, { Application, Request, Response } from "express";
 import dotenv from "dotenv";
 import connectDB from "./config/db";
 import { notFound, errorHandler } from "./middlewares/ErrorMiddleware";
-import UserRoutes from "./routes/UserRoutes";
+import AuthRoutes from "./routes/AuthRoutes";
 
 const app: Application = express();
 
@@ -18,7 +18,7 @@ app.get("/api", (req: Request, res: Response) => {
 });
 
 // User Route
-app.use("/api/auth", UserRoutes);
+app.use("/api/auth", AuthRoutes);
 
 // Middleware
 app.use(notFound);
