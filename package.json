@@ -1,25 +1,28 @@
 {
-  "name": "wordle-backend",
+  "name": "auth-ts",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "TypeScript Rest API with Express.js, JWT, MongoDB",
+  "main": "server.ts",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec ts-node server.ts"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "body-parser": "^1.20.2",
-    "dotenv": "^16.3.1",
-    "express": "^4.18.2",
-    "http-errors": "^2.0.0",
-    "joi": "^17.11.0",
-    "mongoose": "^7.6.3",
-    "nodemon": "^3.0.1"
-  },
   "devDependencies": {
-    "eslint": "^8.52.0"
+    "@types/bcrypt": "^5.0.0",
+    "@types/express": "^4.17.13",
+    "@types/jsonwebtoken": "^8.5.8",
+    "@types/mongoose": "^5.11.97",
+    "@types/node": "^17.0.10",
+    "nodemon": "^3.0.1",
+    "typescript": "^5.3.2"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "dotenv": "^14.2.0",
+    "express": "^4.17.2",
+    "express-async-handler": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.1.7"
   }
 }
