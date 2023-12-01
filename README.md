@@ -39,7 +39,7 @@ JWT_SECRET = 'abc123'
 ## Install Dependencies
 
 ```
-npm install
+yarn
 
 ```
 
@@ -49,7 +49,7 @@ npm install
 
 # Run in dev mode
 
-npm run server
+yarn start
 
 ```
 
