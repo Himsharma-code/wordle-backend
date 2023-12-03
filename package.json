@@ -4,9 +4,17 @@
   "description": "TypeScript Rest API with Express.js, JWT, MongoDB",
   "main": "server.ts",
   "scripts": {
-    "build": "tsc",
-    "start": "node server.ts"
+    "start": "nodemon src/index.ts",
+    "build": "rimraf dist && tsc",
+    "ts.check": "tsc --project tsconfig.json",
+    "add-build": "git add dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "pre-commit": [
+    "ts.check",
+    "build",
+    "add-build"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -15,17 +23,20 @@
     "@babel/preset-typescript": "^7.23.3",
     "@babel/register": "^7.22.15",
     "@types/bcrypt": "^5.0.0",
-    "@types/express": "^4.17.13",
+    "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^8.5.8",
     "@types/mongoose": "^5.11.97",
-    "@types/node": "^17.0.10",
-    "nodemon": "^3.0.1",
+    "@types/node": "^20.10.2",
+    "nodemon": "^3.0.2",
+    "pre-commit": "^1.2.2",
+    "rimraf": "^5.0.5",
+    "ts-node": "^10.9.1",
     "typescript": "^5.3.2"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",
     "dotenv": "^14.2.0",
-    "express": "^4.17.2",
+    "express": "^4.18.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.1.7",

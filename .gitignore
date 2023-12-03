@@ -4,21 +4,4 @@ node_modules/
 # Environment variables
 .env
 
-# Logs
-logs/
-*.log
 
-# Built or compiled files
-dist/
-build/
-
-# OS generated files
-.DS_Store
-Thumbs.db
-
-# IDE or editor files
-.vscode/
-.idea/
-
-# Package lock file
-package-lock.json
