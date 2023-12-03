@@ -4,11 +4,16 @@
   "description": "TypeScript Rest API with Express.js, JWT, MongoDB",
   "main": "server.ts",
   "scripts": {
-    "start": "nodemon --exec ts-node server.ts"
+    "start": "ts-node-dev server.ts",
+    "build": "tsc"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/preset-env": "^7.23.5",
+    "@babel/preset-typescript": "^7.23.3",
+    "@babel/register": "^7.22.15",
     "@types/bcrypt": "^5.0.0",
     "@types/express": "^4.17.13",
     "@types/jsonwebtoken": "^8.5.8",
@@ -23,6 +28,7 @@
     "express": "^4.17.2",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "mongoose": "^6.1.7"
+    "mongoose": "^6.1.7",
+    "ts-node-dev": "^2.0.0"
   }
 }
