@@ -1,6 +1,5 @@
 {
-    "version": 2,
-    "builds": [{ "src": "server.ts", "use": "@now/node-server" }],
-    "routes": [{ "src": "/api/(.*)", "dest": "/server.ts" }]
-  }
-  
+  "version": 2,
+  "builds": [{ "src": "server.ts", "use": "@now/node" }],
+  "routes": [{ "src": "/api/(.*)", "dest": "/server.ts" }]
+}
