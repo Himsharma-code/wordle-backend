@@ -4,8 +4,8 @@
   "description": "TypeScript Rest API with Express.js, JWT, MongoDB",
   "main": "server.ts",
   "scripts": {
-    "start": "ts-node-dev server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node server.ts"
   },
   "author": "",
   "license": "ISC",
