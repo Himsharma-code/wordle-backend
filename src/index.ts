@@ -1,5 +1,6 @@
 import express, { Application, Request, Response } from "express";
 import dotenv from "dotenv";
+import cors from "cors";
 import connectDB from "./config/db";
 import { notFound, errorHandler } from "./middlewares/ErrorMiddleware";
 import AuthRoutes from "./routes/AuthRoutes";
@@ -11,6 +12,9 @@ dotenv.config();
 connectDB();
 
 app.use(express.json());
+
+// Enable CORS for all routes
+app.use(cors());
 
 // Default
 app.get("/api", (req: Request, res: Response) => {
